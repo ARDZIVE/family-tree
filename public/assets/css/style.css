@@ -1,0 +1,304 @@
+
+:root {
+    --myblue-color: #6070D6;
+
+    .bslabel {
+        color:#6E7174;
+        font-size:0.85rem;
+        padding-left:10px;
+    }
+
+    .btn:hover{
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(96, 112, 214, 0.3);
+    }
+
+    /*LOCAL FONT START*/
+
+    /* Apply the font to your elements */
+    body {
+        font-family: 'Poppins', sans-serif; /* Always include a fallback font */
+        font-weight: 400;
+    }
+
+    /* Example usage with different weights */
+    .regular-text {
+        font-weight: 400; /* Regular */
+    }
+
+    .medium-text {
+        font-weight: 500; /* Medium */
+    }
+
+    .semibold-text {
+        font-weight: 600; /* Semi Bold */
+    }
+
+    .bold-text {
+        font-weight: 700; /* Bold */
+    }
+    /*LOCAL FONT END*/
+
+    /*NAVBAR START*/
+    .user-dropdown {
+        position: relative;
+    }
+
+    .user-circle {
+        width: 40px;
+        height: 40px;
+        background-color: var(--myblue-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(96, 112, 214, 0.2);
+    }
+
+    .user-circle:hover {
+        background-color: #4F5EC0;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(96, 112, 214, 0.3);
+    }
+
+    .dropdown-menu {
+        margin-top: 10px;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(96, 112, 214, 0.15);
+        padding: 8px 0;
+        min-width: 200px;
+        display: none;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+    .dropdown-menu:before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        right: 20px;
+        width: 12px;
+        height: 12px;
+        background: white;
+        transform: rotate(45deg);
+        border-radius: 2px;
+        box-shadow: -2px -2px 4px rgba(96, 112, 214, 0.05);
+    }
+
+    .dropdown-item {
+        padding: 10px 24px;
+        color: #444;
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
+    }
+
+    .dropdown-item:hover {
+        background-color: rgba(96, 112, 214, 0.08);
+        color: var(--primary-color);
+        padding-left: 28px;
+    }
+    /*NAVBAR END*/
+
+    /*LOGIN FORM START*/
+    .login-button {
+        background-color: var(--myblue-color);
+        border: none;
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(96,112,214,0.2);
+        color:white;
+    }
+
+    .login-button:hover {
+        background-color: #4F5EC0;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(96,112,214,0.25);
+    }
+
+    .login-button i {
+        margin-right: 8px;
+    }
+
+    .home-link {
+        color: var(--primary-color);
+        text-decoration: none;
+        margin-top: 1.5rem;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .home-link:hover {
+        color: #4F5EC0;
+        transform: translateX(3px);
+    }
+
+    .home-link i {
+        margin-left: 5px;
+        font-size: 0.9em;
+    }
+
+    .form-floating .show-pass {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 5;
+        color: #6c757d;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-floating .show-pass:hover {
+        color: #495057;
+    }
+
+    /* Adjust padding for password input to prevent text overlap with icon */
+    .form-floating input[type="password"],
+    .form-floating input[type="text"] {
+        padding-right: 40px;
+    }
+
+    /* Error message styling */
+    .help-block {
+        font-size: 0.875em;
+        margin-top: 0.25rem;
+    }
+    /*LOGIN FORM END*/
+
+    /*LOGOUT FORM START*/
+    .logout-container {
+        background: white;
+        border-radius: 10px;
+        padding: 3rem;
+        /*box-shadow: 0 8px 30px rgba(96,112,214,0.12);*/
+        text-align: center;
+        max-width: 480px;
+        width: 90%;
+        transition: transform 0.3s ease;
+    }
+
+    .logout-title {
+        color: #2c3345;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    .logout-message {
+        color: #666;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+    /*LOGOUT FORM END*/
+
+    /*REGISTER START*/
+    /* Updated eye icon position */
+    .form-floating .show-pass {
+        position: absolute;
+        right: 12px;
+        top: 16px;  /* This will position it in the middle of the input */
+        cursor: pointer;
+        z-index: 5;
+        color: #6c757d;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-floating .show-pass:hover {
+        color: #495057;
+    }
+
+    /* Ensure password input has space for the icon */
+    .form-floating input[type="password"],
+    .form-floating input[type="text"] {
+        padding-right: 40px !important;
+    }
+
+    /* Make password strength bar thinner */
+    .progress {
+        height: 2px !important; /* Thinner progress bar */
+        background-color: #e9ecef;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    #popover-password {
+        margin-top: 10px;
+    }
+
+    /* Criteria list styling */
+    .list-unstyled {
+        margin-top: 8px !important;
+    }
+
+    /* Progress bar transition */
+    .progress-bar {
+        transition: width 0.3s ease, background-color 0.3s ease;
+    }
+    /*REGISTER END*/
+
+    /*RESET PASSWORD START*/
+    /* Updated eye icon position */
+    .form-floating .show-pass {
+        position: absolute;
+        right: 12px;
+        top: 16px;  /* This will position it in the middle of the input */
+        cursor: pointer;
+        z-index: 5;
+        color: #6c757d;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-floating .show-pass:hover {
+        color: #495057;
+    }
+
+    /* Ensure password input has space for the icon */
+    .form-floating input[type="password"],
+    .form-floating input[type="text"] {
+        padding-right: 40px !important;
+    }
+
+    /* Make password strength bar thinner */
+    .progress {
+        height: 2px !important; /* Thinner progress bar */
+        background-color: #e9ecef;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    #popover-password {
+        margin-top: 10px;
+    }
+
+    /* Criteria list styling */
+    .list-unstyled {
+        margin-top: 8px !important;
+    }
+
+    /* Progress bar transition */
+    .progress-bar {
+        transition: width 0.3s ease, background-color 0.3s ease;
+    }
+
+    /* Error message styling */
+    .help-block {
+        font-size: 0.875em;
+        margin-top: 0.25rem;
+    }
+    /*RESET PASSWORD END*/
+
+}

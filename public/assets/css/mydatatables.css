@@ -1,0 +1,51 @@
+:root{
+    --pagelink-bg-color: #ffffff;
+    --pagelink-bg-color-hover: #DDE0F5;
+    --pagelink-color: #6070D6;
+    --pagelink-border-color: #dee2e6;
+    --pagelink-border-color-hover: #798BFF;
+    --pagelink-disabled-color: #798BFF;
+    --pagelink-focus-box-shadow: rgb(217, 222, 255);
+}
+.page-link {
+    color: var(--pagelink-color);
+    background-color: var(--pagelink-bg-color);
+    border: 1px solid var(--pagelink-border-color);
+    /*padding: 0.5rem 1rem;*/
+    /*margin: 0 2px;*/
+    /*border-radius: 4px;*/
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover state */
+.page-link:hover {
+    color: var(--pagelink-color);
+    background-color: var(--pagelink-bg-color-hover);
+    border-color: var(--pagelink-border-color-hover);
+    z-index: 2;
+}
+
+/* Focus state */
+.page-link:focus {
+    z-index: 3;
+    color: var(--pagelink-color);
+    background-color: #e9ecef;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--pagelink-focus-box-shadow);
+}
+
+/* Active state */
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: var(--pagelink-color);;
+    border-color: var(--pagelink-color);;
+}
+
+/* Disabled state */
+.page-item.disabled .page-link {
+    color: var(--pagelink-disabled-color);
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
